@@ -9,12 +9,12 @@ console.log('despues');
 
 
 var fooRxjs = Rx.Observable.create(function (observer){
-    console.log('Hello');
-    observer.next(42);
+    console.log('Hello');  
+    observer.next(42);   //forma sincronica
 });
 
 console.log('antes');
 fooRxjs.subscribe(function(x){
     console.log(x);
 });
-console.log('despues');
+console.log('despues'); 

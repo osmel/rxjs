@@ -6,13 +6,14 @@ function foo(){
 
 console.log(foo());
 
+
 var fooRxJS = Rx.Observable.create(function(observer){
     console.log('Hello');
     observer.next(42);
     observer.next(100);
-    observer.next(200);
+    observer.next(200); // forma sincronica
     setTimeout(()=>{
-        observer.next(300);
+        observer.next(300);  //forma Asyncronica
     }, 1000);
 });
 
@@ -22,3 +23,7 @@ fooRxJS.subscribe(function(x){
 });
 
 console.log('Despues');
+
+
+
+

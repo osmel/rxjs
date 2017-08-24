@@ -17,6 +17,6 @@ observable.subscribe({
   error: err => console.log('algo salio mal', err),
   complete: () => console.log('done'),
 });
-console.log('just despues de subscribirnos');
+console.log('just despues de subscribirnos'); 
 
  
