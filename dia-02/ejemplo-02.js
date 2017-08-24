@@ -12,6 +12,6 @@ button.addEventListener('click', () => {
 
 var button = document.getElementById('RxJSButton');
 Rx.Observable.fromEvent(button, 'click')
-  .throttleTime(3000)
+  .throttleTime(3000)  //algo como un sleep de tiempo
   .scan(count => count + 1, 0)
   .subscribe(count => console.log(`Clicked ${count} times`));

@@ -14,5 +14,7 @@ var button = document.getElementById('RxJSButton');
 Rx.Observable.fromEvent(button, 'click')
   .throttleTime(1000)
   .map(event => event.clientX)
-  .scan((count, clientX) => count + clientX, 0)
-  .subscribe(count => console.log(count));
+  //recibe argumento de la funcion anterior más proxima
+  .scan((count, argRecibido) => count + argRecibido, 0)
+  //recibe argumento de la funcion anterior más proxima
+  .subscribe(count => console.log(count)); 
