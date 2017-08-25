@@ -1,4 +1,4 @@
-var subject = new Rx.ReplaySubject(100, 500); // 500 windows time
+var subject = new Rx.ReplaySubject(100, 500);  //buffer=100, tiempo=500
 
 subject.subscribe({
     next: (v) => console.log('observerA' + v)
