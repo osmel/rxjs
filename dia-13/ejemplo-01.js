@@ -1,3 +1,5 @@
+//AsyncSubject espera a que la notificación "complete" con el fin de entregar un único valor.
+
 var subject = new Rx.AsyncSubject();
 
 subject.subscribe({
@@ -15,3 +17,7 @@ subject.subscribe({
 
 subject.next(5);
 subject.complete();
+
+
+/*por tanto: todos los observadores mostraran el 5 que es el ultimo valor*/
+
